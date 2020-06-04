@@ -1,0 +1,19 @@
+@import '../shared/variable.scss';
+
+main {
+	margin: 10px 0;
+	color: $dark-color;
+	h2 {
+		font-size: 28px;
+	}
+	hr {
+		margin: 0 15px;
+		color: $primary-color2;
+	}
+}
+.library {
+	padding: 10px 15px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 25px;
+}
