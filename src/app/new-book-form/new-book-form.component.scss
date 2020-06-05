@@ -1,0 +1,38 @@
+@import '../shared/variable.scss';
+
+.modal-wrapper {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	position: fixed;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: grid;
+}
+.book-form {
+	display: inline-block;
+	background-color: white;
+	border-radius: 20px;
+	padding: 40px 35px;
+	font-weight: 600;
+	-webkit-box-shadow: -2px 4px 8px 1px rgba(0, 0, 0, 0.4);
+	box-shadow: -2px 4px 8px 1px rgba(0, 0, 0, 0.4);
+	border-left: 4px solid $primary-color1;
+	input {
+		padding: 5px 10px;
+		background-color: $light-color1;
+		border: 1px solid $primary-color2;
+	}
+	h3 {
+		color: $primary-color1;
+	}
+}
+.show {
+	display: grid;
+}
+
+.hidden {
+	display: none;
+}

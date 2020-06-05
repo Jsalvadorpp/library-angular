@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MainComponent } from './main/main.component';
+import { NewBookFormComponent } from './new-book-form/new-book-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    MainComponent
+    MainComponent,
+    NewBookFormComponent
   ],
   imports: [
     BrowserModule
