@@ -9,7 +9,7 @@
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(0, 0, 0, 0.4);
-	display: grid;
+	display: none;
 }
 .book-form {
 	display: inline-block;
@@ -28,11 +28,4 @@
 	h3 {
 		color: $primary-color1;
 	}
-}
-.show {
-	display: grid;
-}
-
-.hidden {
-	display: none;
 }
