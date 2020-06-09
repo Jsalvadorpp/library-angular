@@ -1,17 +1,17 @@
 <div class='modal-wrapper' id='modal-wrapper'>
-  <form class='book-form' id='book-form'>
+  <form class='book-form' id='book-form' (ngSubmit)='newBook()'>
     <h3>New Book</h3>
 
     <label class='block'>Tittle</label>
-    <input type='text' name="title">
+    <input type='text' name="title" [(ngModel)]='BookInfo.title'>
 
     <label class='block'>Author</label>
-    <input type='text' name="author">
+    <input type='text' name="author" [(ngModel)]='BookInfo.author'>
 
     <label class='block'>Status</label>
-    <input type="radio" name="status" value="read" checked="checked">
+    <input type="radio" name="status" value="read" checked="checked" [(ngModel)]='BookInfo.status'>
     <label>Read</label><br>
-    <input type="radio" name="status" value="unread">
+    <input type="radio" name="status" value="unread" [(ngModel)]='BookInfo.status'>
     <label>Unread</label><br><br>
 
     <button class='btn' id='add-book'>Add book</button>

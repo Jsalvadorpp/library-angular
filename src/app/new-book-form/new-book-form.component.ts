@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from '../models/book';
 
 @Component({
 	selector: 'app-new-book-form',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: [ './new-book-form.component.scss' ]
 })
 export class NewBookFormComponent implements OnInit {
+	BookInfo = {
+		title: '',
+		author: '',
+		status: ''
+	};
+
 	constructor() {}
 
 	ngOnInit(): void {
@@ -23,10 +30,15 @@ export class NewBookFormComponent implements OnInit {
 	}
 
 	cleanForm() {
-		let inputs = document.querySelectorAll(".book-form input[type='text']");
+		let inputs = <any>document.querySelectorAll(".book-form input[type='text']");
 
 		inputs.forEach((input) => {
 			input.value = '';
 		});
+	}
+
+	newBook() {
+		let book = new Book(this.BookInfo);
+		console.log(book);
 	}
 }
