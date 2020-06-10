@@ -7,7 +7,9 @@
   <hr>
 
   <section class='library' id='library'>
-
+    <div *ngFor="let book of bookCollection">
+      <app-book [book]="book"></app-book>
+    </div>
   </section>
 
 </main>

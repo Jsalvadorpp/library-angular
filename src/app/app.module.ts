@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MainComponent } from './main/main.component';
 import { NewBookFormComponent } from './new-book-form/new-book-form.component';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
-	declarations: [ AppComponent, NavbarComponent, MainComponent, NewBookFormComponent ],
+	declarations: [ AppComponent, NavbarComponent, MainComponent, NewBookFormComponent, BookComponent ],
 	imports: [ BrowserModule, FormsModule ],
 	providers: [],
 	bootstrap: [ AppComponent ]
