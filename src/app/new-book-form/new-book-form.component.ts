@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../models/book';
+import { BookService } from '../book.service';
 
 @Component({
 	selector: 'app-new-book-form',
@@ -10,10 +11,10 @@ export class NewBookFormComponent implements OnInit {
 	BookInfo = {
 		title: '',
 		author: '',
-		status: ''
+		status: 'read'
 	};
 
-	constructor() {}
+	constructor(private bookService: BookService) {}
 
 	ngOnInit(): void {
 		let modalWrapper = document.getElementById('modal-wrapper');
@@ -39,6 +40,6 @@ export class NewBookFormComponent implements OnInit {
 
 	newBook() {
 		let book = new Book(this.BookInfo);
-		console.log(book);
+		this.bookService.addBook(book);
 	}
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from '../book.service';
 
 @Component({
 	selector: 'app-main',
@@ -8,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
 	bookCollection: any[];
 
-	constructor() {}
+	constructor(private bookServices: BookService) {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		this.bookCollection = this.bookServices.getBooks();
+	}
 
 	openForm() {
 		let modalWrapper = document.getElementById('modal-wrapper');
