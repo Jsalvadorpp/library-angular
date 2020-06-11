@@ -1,5 +1,5 @@
 <div class='book-card'>
-  <span class='close'>x</span>
+  <span class='close' (click)='removeBook(book)'>x</span>
   <h3 class='title'>{{ book.title }}</h3>
   <p class='author'>Author: {{ book.author }}</p>
   <button class='btn'>{{ book.status }}</button>

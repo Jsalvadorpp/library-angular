@@ -12,7 +12,12 @@ export class BookService {
 	getBooks() {
 		return this.bookList;
 	}
+
 	addBook(book: Book) {
 		this.bookList.push(book);
+	}
+
+	removeBook(book: Book) {
+		this.bookList.splice(this.bookList.indexOf(book), 1);
 	}
 }
