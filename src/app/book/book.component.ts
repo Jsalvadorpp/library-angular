@@ -16,4 +16,7 @@ export class BookComponent implements OnInit {
 	removeBook(book) {
 		this.bookService.removeBook(book);
 	}
+	changeStatus(book) {
+		this.bookService.changeStatus(book);
+	}
 }

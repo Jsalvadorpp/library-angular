@@ -20,4 +20,8 @@ export class BookService {
 	removeBook(book: Book) {
 		this.bookList.splice(this.bookList.indexOf(book), 1);
 	}
+
+	changeStatus(book: Book) {
+		book.status = book.status == 'read' ? 'unread' : 'read';
+	}
 }
